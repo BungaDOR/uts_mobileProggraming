@@ -8,7 +8,7 @@ class LoginActivity extends StatefulWidget {
 }
 
 class _LoginActivityState extends State<LoginActivity> {
-  int
+  bool _obscure = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +57,7 @@ class _LoginActivityState extends State<LoginActivity> {
                 Text("Password*"),
                 SizedBox(height: 5,),
                 TextField(
-                  obscureText: ,
+                  obscureText: _obscure,
                   decoration: InputDecoration(
                     hintText: "Min. 8 characters",
                     suffixIcon: Icon(Icons.remove_red_eye_outlined),
@@ -81,14 +81,24 @@ class _LoginActivityState extends State<LoginActivity> {
                                 backgroundColor: const Color.fromARGB(255, 53, 88, 105),
                                 foregroundColor: Colors.white
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushReplacementNamed(context, "/menu");
+                              },
                                child: Text("Login",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                             ),
                             ),
                           ),
                         ]
-                          ),
+                        ),
                 ),
+                SizedBox(height: 10,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Belum punya akun? ",style: TextStyle(fontWeight: FontWeight.bold),),
+                    Text("Daftar di sini", style: TextStyle(color: Colors.blue),)
+                  ],
+                )
               ],
             ),
           )
