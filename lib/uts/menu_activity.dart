@@ -42,31 +42,31 @@ class MenuActivity extends StatelessWidget {
 
 
     return Scaffold(
-       body: ListView.builder(
-        itemCount: Items.length,
-        itemBuilder: (context, index){
-          Column(
+      body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 50,),
-            child: Container(
-              height: 50,
-              width: 90,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(topRight: Radius.circular(8),
-                bottomRight: Radius.circular(8)),
-                color: Colors.grey,
-                image: DecorationImage(image: AssetImage("gambar/Logo.png")),
-              ),
-              child: Text("LKS",style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 30, color: const Color.fromARGB(255, 53, 88, 105)
-                  ),),
-                  
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  height: 50,
+                  width: 90,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(topRight: Radius.circular(8),
+                    bottomRight: Radius.circular(8)),
+                    color: Colors.grey,
+                    image: DecorationImage(image: AssetImage("gambar/Logo.png")),
+                  ),
+                  child: Text("LKS",style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 30, color: const Color.fromARGB(255, 53, 88, 105)
+                      ),),
+                ),
+              ],
             ),
           )
         ],
-      );
-        }) 
+      )
     );
   }
 }
