@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
-class LoginActivity extends StatelessWidget {
+class LoginActivity extends StatefulWidget {
   const LoginActivity({super.key});
 
+  @override
+  State<LoginActivity> createState() => _LoginActivityState();
+}
+
+class _LoginActivityState extends State<LoginActivity> {
+  int
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,6 +57,7 @@ class LoginActivity extends StatelessWidget {
                 Text("Password*"),
                 SizedBox(height: 5,),
                 TextField(
+                  obscureText: ,
                   decoration: InputDecoration(
                     hintText: "Min. 8 characters",
                     suffixIcon: Icon(Icons.remove_red_eye_outlined),
@@ -63,6 +70,24 @@ class LoginActivity extends StatelessWidget {
                     Icon(Icons.check_box_outline_blank,size: 15,color: Colors.grey,),
                     Text(" Keep me logged in"),
                       ],
+                ),
+                SizedBox(height: 15,),
+                Center(
+                  child: Column(
+                        children: [
+                          SizedBox( width: double.infinity,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(255, 53, 88, 105),
+                                foregroundColor: Colors.white
+                              ),
+                              onPressed: () {},
+                               child: Text("Login",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            ),
+                          ),
+                        ]
+                          ),
                 ),
               ],
             ),
