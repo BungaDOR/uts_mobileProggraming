@@ -96,7 +96,10 @@ class _LoginActivityState extends State<LoginActivity> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Belum punya akun? ",style: TextStyle(fontWeight: FontWeight.bold),),
-                    Text("Daftar di sini", style: TextStyle(color: Colors.blue),)
+                    ElevatedButton(onPressed: () {
+                      Navigator.pushReplacementNamed(context, "/daftar");
+                    }, child: Text("Daftar di sini", style: TextStyle(color: Colors.blue),),
+                    ),
                   ],
                 )
               ],

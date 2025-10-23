@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
        routes: {
          "/" :(context)=>LoginActivity(),
+         "/daftar" :(context)=>DaftarActivity(),
          "/menu" :(context)=>MenuActivity()
        },
       // initialRoute: "/",
