@@ -14,7 +14,7 @@ class LoginActivity extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset("gambar/Logo.png"),
+              Image.asset("gambar/Logo.png",height: ,),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -58,7 +58,14 @@ class LoginActivity extends StatelessWidget {
                     suffixIcon: Icon(Icons.remove_red_eye_outlined),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))
                   ),
-                )
+                ),
+                SizedBox(height: 10,),
+                Row(
+                  children: [
+                    Icon(Icons.check_box_outline_blank,size: 15,color: Colors.grey,),
+                    Text(" Keep me logged in")
+                  ],
+                ),
               ],
             ),
           )
