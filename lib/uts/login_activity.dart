@@ -11,14 +11,19 @@ class LoginActivity extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset("gambar/Logo.png"),
               Column(
+                // crossAxisAlignment: cro,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("LKS",style: TextStyle(
-                    fontWeight: 
+                    fontWeight: FontWeight.bold, fontSize: 35, color: const Color.fromARGB(255, 89, 128, 147)
                   ),),
-                  Text("MART")
+                  Text("MART",style: TextStyle(
+                    fontWeight: FontWeight.bold, fontSize: 35, color: Colors.blueGrey
+                  ),)
                 ],
               ),
             ],
