@@ -8,6 +8,7 @@ class DaftarActivity extends StatefulWidget {
 }
 
 class _DaftarActivityState extends State<DaftarActivity> {
+  bool _obscure1 = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +51,24 @@ class _DaftarActivityState extends State<DaftarActivity> {
                 ),
                 SizedBox(height: 5,),
                 Text("Alamat"),
+                SizedBox(height: 5,),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Alamat",
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))
+                  ),
+                ),
+                SizedBox(height: 5,),
+                Text("Password*"),
+                SizedBox(height: 5,),
+                TextField(
+                  obscureText: _obscure1,
+                  decoration: InputDecoration(
+                    hintText: "Min. 8 characters",
+                    suffixIcon: Icon(Icons.remove_red_eye_outlined),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))
+                  ),
+                ),
               ],
             ),
           )
