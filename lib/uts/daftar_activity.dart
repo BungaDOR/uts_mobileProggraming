@@ -69,9 +69,51 @@ class _DaftarActivityState extends State<DaftarActivity> {
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))
                   ),
                 ),
+                SizedBox(height: 5,),
+                Text("Konfirmasi Password*"),
+                SizedBox(height: 5,),
+                TextField(
+                  obscureText: _obscure1,
+                  decoration: InputDecoration(
+                    hintText: "Min. 8 characters",
+                    suffixIcon: Icon(Icons.remove_red_eye_outlined),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))
+                  ),
+                ),
               ],
             ),
-          )
+          ),
+          SizedBox(height: 10,),
+                Center(
+                  child: Column(
+                        children: [
+                          SizedBox( width: double.infinity,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color.fromARGB(255, 53, 88, 105),
+                                foregroundColor: Colors.white
+                              ),
+                              onPressed: () {
+                                Navigator.pushReplacementNamed(context, "/menu");
+                              },
+                               child: Text("Daftar",style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
+                            ),
+                          ),
+                        ]
+                        ),
+                ),
+                SizedBox(height: 10,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("Sudah punya akun? ",style: TextStyle(fontWeight: FontWeight.bold),),
+                    ElevatedButton(onPressed: () {
+                      Navigator.pushReplacementNamed(context, "/");
+                    }, child: Text("Login di sini", style: TextStyle(color: Colors.blue),),
+                    ),
+                  ],
+                )
         ],
       ),
     );
