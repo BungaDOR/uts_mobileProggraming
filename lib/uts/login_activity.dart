@@ -12,17 +12,16 @@ class LoginActivity extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            //crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset("gambar/Logo.png",height: ,),
+              Image.asset("gambar/Logo.png",height: 70,),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("LKS",style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 40, color: const Color.fromARGB(255, 53, 88, 105)
+                    fontWeight: FontWeight.bold, fontSize: 30, color: const Color.fromARGB(255, 53, 88, 105)
                   ),),
                   Text("MART",style: TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 40, color: const Color.fromARGB(255, 53, 88, 105)
+                    fontWeight: FontWeight.bold, fontSize: 30, color: const Color.fromARGB(255, 53, 88, 105)
                   ),)
                 ],
               ),
@@ -36,11 +35,10 @@ class LoginActivity extends StatelessWidget {
                 Text("Sign In",style: TextStyle(
                   fontSize: 30, fontWeight: FontWeight.bold
                 ),),
-                SizedBox(height: 5,),
                 Text("Enter your ID and password to sign in!",style: TextStyle(
                   fontSize: 15, color: Colors.grey
                 ),),
-                SizedBox(height: 25,),
+                SizedBox(height: 20,),
                 Text("Email"),
                 SizedBox(height: 5,),
                 TextField(
@@ -63,8 +61,8 @@ class LoginActivity extends StatelessWidget {
                 Row(
                   children: [
                     Icon(Icons.check_box_outline_blank,size: 15,color: Colors.grey,),
-                    Text(" Keep me logged in")
-                  ],
+                    Text(" Keep me logged in"),
+                      ],
                 ),
               ],
             ),
