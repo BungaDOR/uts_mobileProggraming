@@ -38,7 +38,7 @@ class LoginActivity extends StatelessWidget {
                 ),),
                 SizedBox(height: 5,),
                 Text("Enter your ID and password to sign in!",style: TextStyle(
-                  fontSize: 10, color: Colors.grey
+                  fontSize: 15, color: Colors.grey
                 ),),
                 SizedBox(height: 25,),
                 Text("Email"),
@@ -46,6 +46,16 @@ class LoginActivity extends StatelessWidget {
                 TextField(
                   decoration: InputDecoration(
                     hintText: "email",
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Text("Password*"),
+                SizedBox(height: 5,),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Min. 8 characters",
+                    suffixIcon: Icon(Icons.remove_red_eye_outlined),
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(8))
                   ),
                 )
