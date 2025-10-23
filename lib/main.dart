@@ -11,7 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
+      // untuk navigasi
+      // routes: {
+      //   "/" :(context)=>Pages1(),
+      //   "/halaman2" :(context)=>Pages2()
+      // },
+      // initialRoute: "/",
        home: LoginActivity()
     );
   }
